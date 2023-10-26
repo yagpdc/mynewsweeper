@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: Fire Coda, monospace;    
     
+    
 }
 
 body{
@@ -38,7 +39,11 @@ body{
     height: 26px;
     width: 26px;
     gap: 2px;
-    background-color: #fff;
+    background-color: #fff; 
+    user-select: none; 
+    -moz-user-select: none; 
+    -webkit-text-select: none; 
+    -webkit-user-select: none; 
 }
 
 
@@ -53,6 +58,8 @@ body{
     line-height: 1.2;
     font-size: 21px;
 }
+
+
 
 .cell {
     height: 26px;
