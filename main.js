@@ -1,6 +1,6 @@
 let row = 10;
 let col = 10;
-let numBombs = 15;
+let numBombs = 10;
 
 
 
@@ -128,6 +128,8 @@ function Game(row, col, numBombs) {
     }
   }
 
+
+
   let bombDisplay = document.querySelector("#bomb_display");
   bombDisplay.textContent = numBombs;
 
@@ -173,20 +175,13 @@ function Game(row, col, numBombs) {
 
 
 function restart() {
-    // Clear the grid by removing all cells
     grid.innerHTML = "";
-  
-    // Reset the number of bombs
-    numBombs = 15;
-  
-    // Recreate the grid and generate a new game
+    numBombs = 10;
     createGrid();
     Game(row, col, numBombs);
-  
-    // Reattach game controls to the new cells
     gameControls();
     winCount.textContent = wins;
   }
 
 
-Game(10, 10, 15);
+Game(10, 10, 10);
