@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Minesweeper 🚩</h1>
+    <div id="screen">
+      <h1>Wins: <span id="win_count"></span></h1>
+      <div id="header">
+        <div>
+          <h1>Bombs: <span id="bomb_display"></span></h1>
+        </div>
+        <button onclick="restart()">Restart</button>
+      </div>
+      <div class="border">
+        <div class="grid"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

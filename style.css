@@ -1,0 +1,154 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Fire Coda, monospace;    
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #212020;  
+    height: 100vh;
+    overflow: hidden;
+    }
+
+    body > h1 {
+        color: #fff;
+        font-size: 50px;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+#screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;       
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 26px;
+    width: 26px;
+    gap: 2px;
+    background-color: #fff;
+}
+
+
+.border{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 10px solid rgb(155, 53, 53);
+    background-color: #000000;
+    border-radius: 10px;
+    gap: 2px;
+    line-height: 1.2;
+    font-size: 21px;
+}
+
+.cell {
+    height: 26px;
+    width: 26px;
+    background-color: #c6c6c6;
+    box-shadow: 1px 2px 1px rgb(73, 72, 72) inset;
+    box-shadow: 1px 2px 1px rgb(73, 72, 72) ;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.flag {
+    color: transparent !important;
+    background-image: url(https://minesweeper.online/img/skins/hd/flag.svg?v=3);
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+
+.hide {
+    color: transparent !important;
+    background-image: url(https://minesweeper.online/img/skins/hd/closed.svg?v=3);
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#bomb_display{
+    text-align: center;
+    color: rgb(153, 154, 156);
+}
+
+#screen h1{
+    text-align: center;
+    color: aliceblue;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    background-color: #9b3535;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #761426;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.one {
+    color: blue;
+}
+
+.two {
+    color: green;
+}
+
+.three{
+    color: red;
+}
+
+.four{
+    color: purple;
+}
+
+.five{
+    color: maroon;
+}
+
+.six{
+    color: teal;
+}
+
+.seven{
+    color: black;
+}
+
+.eight{
+    color: pink;
+}
+
