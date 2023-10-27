@@ -29,7 +29,7 @@ createGrid();
 
 function gameControls() {
   let cells = document.querySelectorAll(".cell");
-
+  
   cells.forEach((cell) => {
     cell.addEventListener("click", () => {
       cell.classList.remove("hide");
@@ -112,6 +112,7 @@ function Game(row, col, numBombs) {
     for (let j = 0; j < col; j++) {
       if (arr[i][j] !== "💣") {
         increment = "";
+        
         if (i > 0 && j > 0 && arr[i - 1][j - 1] === "💣") {
           increment++;
         }
@@ -185,7 +186,7 @@ function Game(row, col, numBombs) {
 
 function restart() {
   grid.innerHTML = "";
-  numBombs = 15;
+  numBombs = 10;
   createGrid();
   Game(row, col, numBombs);
   gameControls();
