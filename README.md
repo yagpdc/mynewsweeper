@@ -13,3 +13,4 @@ Este é um projeto de Campo Minado desenvolvido com HTML, CSS e JavaScript, que 
 
 <a href="https://mynewsweeper.vercel.app/">Clique aqui para testar</a>
 
+![Campo Minado](chrome-capture-2023-11-1.gif)
