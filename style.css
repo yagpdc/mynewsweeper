@@ -1,161 +1,246 @@
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Fire Coda, monospace;    
-    
-    
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Fire Coda, monospace;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #212020;  
-    height: 100vh;
-    overflow: hidden;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212020;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    body > h1 {
-        color: #fff;
-        font-size: 50px;
-        margin-bottom: 4rem;
-        text-align: center;
-    }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  color: #c6c6c6;
+  background-color: black;
+  width: 100%;
+  padding: 5px 10px;
+}
 
-#screen{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;       
+.title {
+  color: #c6c6c6;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    height: 26px;
-    width: 26px;
-    gap: 2px;
-    background-color: #fff; 
-    user-select: none; 
-    -moz-user-select: none; 
-    -webkit-text-select: none; 
-    -webkit-user-select: none; 
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 26px;
+  width: 26px;
+  gap: 2px;
+  background-color: #fff;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
 }
 
-
-.border{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    border: 10px solid rgb(155, 53, 53);
-    background-color: #000000;
-    border-radius: 10px;
-    gap: 2px;
-    line-height: 1.2;
-    font-size: 21px;
+.border {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 10px solid rgb(155, 53, 53);
+  background-color: #000000;
+  border-radius: 10px;
+  gap: 2px;
+  line-height: 1.2;
+  font-size: 21px;
 }
-
-
 
 .cell {
-    height: 26px;
-    width: 26px;
-    background-color: #c6c6c6;
-    box-shadow: 1px 2px 1px rgb(73, 72, 72) inset;
-    box-shadow: 1px 2px 1px rgb(73, 72, 72) ;
-    cursor: pointer;
-    text-align: center;
-
+  height: 26px;
+  width: 26px;
+  background-color: #c6c6c6;
+  box-shadow: 1px 2px 1px rgb(73, 72, 72) inset;
+  box-shadow: 1px 2px 1px rgb(73, 72, 72);
+  cursor: pointer;
+  text-align: center;
 }
 
 .flag {
-    color: transparent !important;
-    background-image: url(https://minesweeper.online/img/skins/hd/flag.svg?v=3);
-    background-size: 100% 100%;
-    background-position: center;
+  color: transparent !important;
+  background-image: url(https://minesweeper.online/img/skins/hd/flag.svg?v=3);
+  background-size: 100% 100%;
+  background-position: center;
 }
-
 
 .hide {
-    color: transparent !important;
-    background-image: url(https://minesweeper.online/img/skins/hd/closed.svg?v=3);
-    background-size: 100% 100%;
-    background-position: center;
+  color: transparent !important;
+  background-image: url(https://minesweeper.online/img/skins/hd/closed.svg?v=3);
+  background-size: 100% 100%;
+  background-position: center;
 }
 
-#bomb_display{
-    text-align: center;
-    color: rgb(153, 154, 156);
+#btn-menu {
+  background-color: #c22f2f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-#screen h1{
-    text-align: center;
-    color: aliceblue;
+#btn-menu:hover {
+  background-color: #982338;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#win_count {
+  color: #c22f2f;
+}
+
+#bomb_display {
+  text-align: center;
+  color: rgb(153, 154, 156);
+}
+
+#screen h1 {
+  text-align: center;
+  color: aliceblue;
+}
+
+#title {
+  color: #c22f2f;
 }
 
 #header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#sidebar {
+  text-align: center;
+  color: #c6c6c6;
+  position: absolute;
+  position: fixed;
+  left: 0;
+  background-color: #000;
+  height: 100vh;
+  width: 25%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  animation: fadeInLeftBig 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  #sidebar {
     width: 100%;
+  }
 }
 
-button {
-    background-color: #9b3535;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    cursor: pointer;
+.active {
+  display: none;
 }
 
-button:hover {
-    background-color: #761426;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
+#text-container > h2 {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#restart-btn {
+  background-color: #9b3535;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#restart-btn:hover {
+  background-color: #761426;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  background-color: #000;
+  color: #c6c6c6;
+  padding: 10px;
+  margin: 10px;
+  background-color: #212020;
+}
+
+.card > p {
+  width: 88%;
+}
+
+.mouse {
+  height: 30px;
+  width: auto;
 }
 
 .one {
-    color: blue;
+  color: blue;
 }
 
 .two {
-    color: green;
+  color: green;
 }
 
-.three{
-    color: red;
+.three {
+  color: red;
 }
 
-.four{
-    color: purple;
+.four {
+  color: purple;
 }
 
-.five{
-    color: maroon;
+.five {
+  color: maroon;
 }
 
-.six{
-    color: teal;
+.six {
+  color: teal;
 }
 
-.seven{
-    color: black;
+.seven {
+  color: black;
 }
 
-.eight{
-    color: pink;
+.eight {
+  color: pink;
 }
-

@@ -3,25 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="mine.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/mine.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Minesweeper</title>
   </head>
   <body>
-    <h1>Minesweeper 🚩</h1>
-    <div id="screen">
+    <nav>
+      <button id="btn-menu">
+      </button>
+      <h1 id="title">Minesweeper</h1>
       <h1>Wins: <span id="win_count"></span></h1>
-      <div id="header">
-        <div>
-          <h1>Bombs: <span id="bomb_display"></span></h1>
+    </nav>
+    <div id="container">
+      <div id="sidebar">
+        <p id="text-container">
+          
+          <!-- <button id="easy" onclick="easy()">Easy</button>
+          <button id="medium" onclick="medium()">Medium</button>
+          <button id="hard" onclick="hard()">Hard</button> -->
+          
+          
+        </p>
+      </div>
+      <div id="screen">
+        <div id="header">
+          <div>
+            <h1>Bombs: <span id="bomb_display"></span></h1>
+          </div>
+          <button id="restart-btn" onclick="restart()">Restart</button>
         </div>
-        <button onclick="restart()">Restart</button>
+        <div class="border">
+          <div class="grid"></div>
+        </div>
       </div>
-      <div class="border">
-        <div class="grid"></div>
-      </div>
+      <p></p>
     </div>
-
-    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/sidebar.js"></script>
   </body>
 </html>

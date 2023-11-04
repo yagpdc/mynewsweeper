@@ -1,6 +1,6 @@
 let row = 10;
 let col = 10;
-let numBombs = 15;
+let numBombs = 10;
 
 const grid = document.querySelector(".grid");
 const winCount = document.querySelector("#win_count");
@@ -194,3 +194,5 @@ function restart() {
 }
 
 Game(10, 10, 10);
+
+
